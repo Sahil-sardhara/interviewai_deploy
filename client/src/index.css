@@ -1,0 +1,380 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* In your styles.css or relevant stylesheet */
+body{
+  background-color: #eaf0fe;
+}
+.background-beams {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.text-only {
+  justify-content: center;
+}
+
+.text-only span {
+  display: none;
+}
+
+.text-only .text-content {
+  display: none;
+}
+
+/* Add this to your CSS file */
+.floating-button {
+  display: none;
+  /* Ensure it's hidden by default */
+}
+
+@media (max-width: 750px) {
+  .floating-button {
+    display: block;
+    /* Ensure it's visible on small screens */
+  }
+}
+
+.active {
+  background-color: #4c51bf;
+}
+.deactivate:hover {
+  background-color: #edf2f7;
+}
+
+/* From Uiverse.io by andrew-demchenk0 */
+.card2 {
+  --main-color: #000;
+  --submain-color: #78858f;
+  --bg-color: #fff;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  background: var(--bg-color);
+  
+  box-shadow: rgba(0, 0, 0, 0.10) 0px 5px 15px;
+}
+
+.card2__img {
+  height: 160px;
+  width: 100%;
+}
+
+.card2__img svg {
+  height: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+.card2__avatar {
+  position: absolute;
+  width: 114px;
+  height: 114px;
+  background: var(--bg-color);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: calc(50% - 57px);
+}
+
+.card2__avatar svg {
+  width: 100px;
+  height: 100px;
+}
+
+.card2__title {
+  margin-top: 60px;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--main-color);
+}
+
+.card2__subtitle {
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--submain-color);
+}
+
+.card3 {
+  --main-color: #000;
+  --submain-color: #78858f;
+  --bg-color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: 20px;
+  background: var(--bg-color);
+  box-shadow: rgba(0, 0, 0, 0.10) 0px 5px 15px;
+}
+/* From Uiverse.io by Nawsome */ 
+/* From Uiverse.io by SouravBandyopadhyay */ 
+#outline {
+  stroke-dasharray: 2.42777px, 242.77666px;
+  stroke-dashoffset: 0;
+  -webkit-animation: anim 1.6s linear infinite;
+  animation: anim 1.6s linear infinite;
+}
+
+@-webkit-keyframes anim {
+  12.5% {
+    stroke-dasharray: 33.98873px, 242.77666px;
+    stroke-dashoffset: -26.70543px;
+  }
+
+  43.75% {
+    stroke-dasharray: 84.97183px, 242.77666px;
+    stroke-dashoffset: -84.97183px;
+  }
+
+  100% {
+    stroke-dasharray: 2.42777px, 242.77666px;
+    stroke-dashoffset: -240.34889px;
+  }
+}
+
+@keyframes anim {
+  12.5% {
+    stroke-dasharray: 33.98873px, 242.77666px;
+    stroke-dashoffset: -26.70543px;
+  }
+
+  43.75% {
+    stroke-dasharray: 84.97183px, 242.77666px;
+    stroke-dashoffset: -84.97183px;
+  }
+
+  100% {
+    stroke-dasharray: 2.42777px, 242.77666px;
+    stroke-dashoffset: -240.34889px;
+  }
+}
+
+
+/* From Uiverse.io by Pradeepsaranbishnoi */ 
+.container2 {
+  display: flex;
+}
+
+.radio-tile-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.radio-tile-group .input-container {
+  position: relative;
+  height: 40px;
+  width: 120px;
+}
+
+.radio-tile-group .input-container .radio-button {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+
+.radio-tile-group .input-container .radio-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #4338ca;
+  border-radius: 5px;
+  padding: 1rem;
+  transition: transform 300ms ease-in-out;
+}
+
+.radio-tile-group .input-container .icon svg {
+  fill: #4338ca;
+  width: 2rem;
+  height: 2rem;
+}
+
+.radio-tile-group .input-container .radio-tile-label {
+  text-align: center;
+  color: #4338ca;
+}
+
+.radio-tile-group .input-container .radio-button:checked + .radio-tile {
+  background-color: #4338ca;
+  border: 2px solid #4338ca;
+  color: white;
+  transform: scale(1.1, 1.1);
+}
+
+.radio-tile-group .input-container .radio-button:checked + .radio-tile .icon svg {
+  fill: white;
+  background-color: #4338ca;
+}
+
+.radio-tile-group .input-container .radio-button:checked + .radio-tile .radio-tile-label {
+  color: white;
+  background-color: #4338ca;
+}
+
+
+
+
+
+
+/* From Uiverse.io by elijahgummer */ 
+.analyze svg path.stick {
+  transform: translate(0);
+  animation: stick 2s ease infinite;
+  /* Change wand color */
+}
+
+.analyze svg path.star-1 {
+  fill: #ff4500; /* OrangeRed color */
+  animation: sparkles 2s ease infinite, scaleStars 2s ease infinite,
+    colorChange 2s ease infinite;
+  animation-delay: 150ms;
+}
+
+.analyze svg path.star-2 {
+  fill: #00ff00; /* Lime color */
+  animation: sparkles 2s ease infinite, scaleStars 2s ease infinite,
+    colorChange 2s ease infinite;
+}
+
+.board {
+  animation: bounce 2s ease infinite;
+}
+
+@keyframes sparkles {
+  0% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes stick {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+  25% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+  50% {
+    transform: translate3d(3px, -2px, 0) rotate(8deg);
+  }
+  75% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+}
+
+@keyframes scaleStars {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    fill: #ff4500; /* OrangeRed */
+  }
+  25% {
+    fill: #ffd700; /* Gold */
+  }
+  50% {
+    fill: #00ff00; /* Lime */
+  }
+  75% {
+    fill: #1e90ff; /* DodgerBlue */
+  }
+  100% {
+    fill: #ff4500; /* OrangeRed */
+  }
+}
+
+
+
+
+/* From Uiverse.io by amikambs */ 
+.rating:not(:checked) > input {
+  position: absolute;
+  appearance: none;
+}
+
+.rating:not(:checked) > label {
+  float: right;
+  cursor: pointer;
+  font-size: 30px;
+  fill: #6666668d;
+}
+
+.rating:not(:checked) > label > svg {
+  fill: #6666668d; /* Set default color for SVG */
+  transition: fill 0.3s ease-in-out; /* Add a transition effect */
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+  fill: #e58e09;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  fill: #ff9e0b;
+}
+
+.rating > input:checked ~ label > svg {
+  fill: #ffa723; /* Set color for selected stars */
+}
